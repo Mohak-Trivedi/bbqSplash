@@ -49,8 +49,12 @@ strong {
 .top-text {
     color: #F18119;
     font-weight: 900;
+    padding-top: 2px;
     text-transform: uppercase;
     order: -1;
+    border-top: 5px solid #F18119;
+    margin-top: 0;
+    border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
 }
 
 .fine-print {
@@ -109,6 +113,12 @@ input {
     text-align: inherit;
     padding: .25em;
     border: 1px solid #404040;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+input:focus {
+    transform: scale(1.1);
 }
 
 .btn {
@@ -129,7 +139,8 @@ input {
     transform: scale(1);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-primary:focus {
     transform: scale(1.1);
 }
 
